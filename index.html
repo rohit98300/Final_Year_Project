@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+<head> <!-- We are using a jQuery version hosted by jQuery- But any version canbe downloaded any link to it in local deployment --> 
+
+
+<title>View From Database</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script> 
+    <style type="text/css">
+        div{
+        margin-top: 50px;
+        width: 1000px;
+        margin-left: 285px;
+        
+    }
+        .caption{
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 0px;
+       color:rgb(158,27,214);
+        font-family:Bitter,Georgia,Times,"Times New Roman",serif;
+        font-size:1.4em;
+        font-weight: bold;
+        
+        
+    }
+        body{
+            background-color: cornsilk;
+            background-size: cover;
+        } 
+    </style>
+    <body>
+       <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+      
+       <h1 class="caption">View From DataBase</h1>
+        <div id="getdata"></div>
+        <div style="margin-left: 650px;">
+        <h4>Payment Mode</h4>
+       <input type="radio" name="Money" id="onl" value="Online" onclick="document.location.href='PayUMoney_form.php'">Online Mode
+<input type="radio" name="Money" id="off"  onclick="document.location.href='sample.php'" value="Offline">DigiCash Mode<br>
+</div>
+
+
+       <!-- <button><a href="#" class="leftlinks" onclick="test();"></a></button>-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    </body>
+    <script type="text/javascript"> 
+    var auto_refresh = setInterval( function() { $('#getdata').load('read_all.php'); }, 3000); // refreshing after every 15000 milliseconds </script>
+
+    </head>
+</html>
